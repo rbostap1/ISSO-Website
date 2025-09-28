@@ -1,2 +1,2 @@
 # ISSO-Website
-This sit is for Information Systems Student Organization
+This site is for Information Systems Student Organization
