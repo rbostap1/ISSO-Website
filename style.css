@@ -1,19 +1,161 @@
 
 body {
     margin: 0;
+}
 
-    /* Custom overrides for Bootstrap and hero section */
-    .object-fit-cover {
-        object-fit: cover;
+/* Custom overrides for Bootstrap and hero section */
+.object-fit-cover {
+    object-fit: cover;
+}
+.text-shadow {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+
+/* Theme colors */
+:root {
+    --isso-orange: #E84E02;
+    --isso-teal: #04AB83;
+}
+
+.navbar {
+    background: #E84E02 !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    /* Theme color utilities */
+    /* Theme color utilities */
+    :root {
+        --bs-primary: #E84E02;
+        --bs-secondary: #04AB83;
+        --isso-primary: #E84E02;
+        --isso-secondary: #04AB83;
     }
-    .text-shadow {
+
+    /* Navbar uses orange/teal gradient */
+    /* Navbar uses primary/secondary gradient */
+    .navbar {
+    background: oklab(100% 0 -0.00011) !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    z-index: 10;
+    }
+    /* Use primary for brand */
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--isso-primary) !important;
         text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
+    .navbar-brand img {
+        height: 48px;
+        width: auto;
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
+        border-radius: 12px;
+        background: rgba(255,255,255,0.08);
+        padding: 2px;
     }
-    .site-main {
-        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0 0.5rem;
+        position: relative;
+        transition: color 0.2s, background 0.2s;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
     }
+    /* Use primary for nav-link hover, secondary for background */
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+        color: var(--isso-primary) !important;
+        background: rgba(4,171,131,0.10);
+        box-shadow: 0 2px 8px rgba(232,78,2,0.10);
+    }
+    /* Use primary for toggler */
+    .navbar-toggler {
+        border-radius: 8px;
+        border: none;
+        background: var(--isso-primary) !important;
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(232,78,2,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* Accent buttons and links using Bootstrap utility classes */
+
+    /* Buttons use primary, hover secondary */
+    .btn-warning, .btn-outline-primary, .btn-primary {
+        background-color: var(--isso-primary) !important;
+        border-color: var(--isso-primary) !important;
+        color: #fff !important;
+    }
+    .btn-warning:hover, .btn-outline-primary:hover, .btn-primary:hover {
+        background-color: var(--isso-secondary) !important;
+        border-color: var(--isso-secondary) !important;
+        color: #fff !important;
+    }
+
+
+    /* Links use secondary, hover primary */
+    a, .link-primary {
+        color: var(--isso-secondary) !important;
+        transition: color 0.2s;
+    }
+    a:hover, .link-primary:hover {
+        color: var(--isso-primary) !important;
+    }
+
+    /* Card accent border and title */
+
+    /* Cards use secondary border, primary title */
     .card {
-        padding: 1rem 0.5rem;
+        border: 2px solid var(--isso-secondary);
+        border-radius: 1rem;
+        box-shadow: 0 4px 32px rgba(4,171,131,0.09);
     }
+    .card-title {
+        color: var(--isso-primary);
+    }
+
+    /* Accent for hero button */
+
+    /* Hero button uses primary/secondary gradient */
+    .btn-lg.shadow {
+        background: linear-gradient(90deg, var(--isso-primary) 60%, var(--isso-secondary) 100%) !important;
+        border: none !important;
+        color: #fff !important;
+        box-shadow: 0 2px 8px rgba(232,78,2,0.10);
+    }
+    .btn-lg.shadow:hover {
+        background: linear-gradient(90deg, var(--isso-secondary) 60%, var(--isso-primary) 100%) !important;
+    }
+
+    /* Utility classes for backgrounds and text */
+
+    /* Utility classes for backgrounds and text */
+    .bg-isso-primary {
+        background-color: var(--isso-primary) !important;
+    }
+    .bg-isso-secondary {
+        background-color: var(--isso-secondary) !important;
+    }
+    .text-isso-primary {
+        color: var(--isso-primary) !important;
+    }
+    .text-isso-secondary {
+        color: var(--isso-secondary) !important;
+    }
+}
+.card-text {
+    font-size: 1rem;
+    color: #555;
 }
