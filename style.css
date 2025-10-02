@@ -222,3 +222,8 @@ footer.bg-isso-primary {
     border-radius: 1.25rem 1.25rem 0 0;
     box-shadow: 0 -2px 12px rgba(232,78,2,0.08);
 }
+
+/* Add padding to About section list items */
+#about .card-body ul.list-unstyled li {
+    padding: 0.5rem 0;
+}
